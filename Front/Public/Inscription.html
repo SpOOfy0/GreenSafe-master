@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inscription</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="Inscription.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+    body {
+      background-color: #e6f2e0;
+    }
+
+    #conteneur {
+      width: 400px;
+      margin: 20px auto; /* Ajout de la marge en haut */
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #header {
+      font-size: 24px;
+      color: #1e442c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #customer-form label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    #customer-form input[type="text"],
+    #customer-form input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn-primary {
+      background-color: #52a745;
+      border-color: #52a745;
+    }
+
+    #connexion {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    #connexion a {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="conteneur">
+    <h1 id="header">Inscription</h1>
+    <form id="customer-form">
+      <label for="last">Nom :</label>
+      <input type="text" id="last" placeholder="Nom"><br><br>
+      <label for="first">Prénom :</label>
+      <input type="text" id="first" placeholder="Prénom"><br><br>
+      <label for="email">Email :</label>
+      <input type="email" id="email" placeholder="Email"><br><br>
+      <label for="company">Mot de passe :</label>
+      <input type="text" id="password" placeholder="Mot de passe"><br><br>
+    </form>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+          <button type="button" class="btn btn-primary" onclick="listenAjouter()">Inscription</button>
+        </div>
+    </div>
+  </div>
+  
+  <div id="connexion">
+    <a href="Connexion.html">Déjà Inscrit ?</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours - GreenSafe</title>
+  <script src="Main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #e6f2e0;
+    }
+
+    .navbar {
+      background-color: #73b456;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #52a745;
+      border-color: #52a745;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
+
+    .course-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .course-list li {
+      margin-bottom: 10px;
+    }
+
+    .course-list li a {
+      display: block;
+      background-color: #73b456;
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .course-list li a:hover {
+      background-color: #52a745;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="Accueil.html">
+          <img src="Logo.png" alt="Logo GreenSafe" class="rounded-circle">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Cours.html">Cours</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Progression.html">Progression</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" id="connexionBtnContainer">
+              <a class="btn btn-primary" href="Connexion.html">Se connecter/S'inscrire</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenu de la page -->
+  <main>
+    
+    <div class="container">
+      <h2><br><br><br>Nos Cours<br><br></h2>
+      <ul class="course-list">
+        <li><a href="Cours/Cours01.html">Cours 01 - Les risques chimiques</a></li>
+        <li><a href="Cours/Cours02.html">Cours 02 - Cybersecurité</a></li>
+        <li><a href="Cours/Cours03.html">Cours 03 - Sécurité incendie</a></li>
+        <li><a href="Cours/Cours04.html">Cours 04 - Risque électrique</a></li>
+        <li><a href="Cours/Cours05.html">Cours 05 - Gestion de l'environnement urbain</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    const isLoggedIn = checkAuthentication(); // Modifier cette valeur en fonction de l'état de connexion de l'utilisateur
+    console.log(isLoggedIn)
+    // Vérifier si l'utilisateur est connecté et mettre à jour le bouton
+    window.addEventListener('DOMContentLoaded', function() {
+      const connexionBtnContainer = document.getElementById('connexionBtnContainer');
+      if (isLoggedIn) {
+        // Remplacer le bouton "Se connecter/S'inscrire" par le bouton de déconnexion
+        const deconnexionBtn = document.createElement('button');
+        deconnexionBtn.className = 'btn btn-primary';
+        deconnexionBtn.textContent = 'Déconnexion';
+        deconnexionBtn.addEventListener('click', deconnexion);
+        connexionBtnContainer.innerHTML = '';
+        connexionBtnContainer.appendChild(deconnexionBtn);
+      }
+    });
+  </script>
+
+</body>
+</html>
